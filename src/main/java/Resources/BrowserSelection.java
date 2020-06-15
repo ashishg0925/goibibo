@@ -10,10 +10,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BrowserSelection {
 
+	public   WebDriver Driver;
+	public   Properties prop;
 	
-	public static  WebDriver Driver;
-	public static  Properties prop;
-	public static WebDriver InitiateBrowser() throws IOException 
+	public  WebDriver InitiateBrowser() throws IOException 
 	{
 		
 		prop = new Properties();
@@ -22,7 +22,7 @@ public class BrowserSelection {
 		String BrowserName= prop.getProperty("Browser");
 		if(BrowserName.contentEquals("Chrome"))
 		{
-			System.setProperty("webdriver.chrome.driver", "‪D:\\ChromeDriver\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\Ashu\\git\\goibibo\\Drivers\\chromedriver.exe");
 			Driver = new ChromeDriver();
 		}
 		Driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
