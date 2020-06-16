@@ -6,9 +6,10 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
+@CucumberOptions(
 
-@CucumberOptions(features = "Feature\\Login.feature", glue = "src\\test\\java\\Goibibo_StepDefination")
+	features="Feature", glue ="Goibibo_StepDefination" , monochrome = true , plugin = {"pretty","html:test-output"})
 
-public class login_Goibibo {
+public class Runner_Login {
 
 }
