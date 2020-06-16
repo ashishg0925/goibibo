@@ -4,6 +4,7 @@ import org.junit.runner.RunWith;
 
 import PageObject.GoibiboLandingPage;
 import Resources.BrowserSelection;
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -39,6 +40,10 @@ public class Login_Goibibo extends BrowserSelection
 		GB.ValidateUserLogin();
 	    
 	}
-	
+	@And("^close the Browser$")
+    public void close_the_browser() throws Throwable {
+        Driver.close();
+    }
+
 	
 }
