@@ -1,6 +1,7 @@
 package PageObject;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 
 import Resources.BrowserSelection;
@@ -28,6 +29,9 @@ public class GoibiboLandingPage extends BrowserSelection {
 	{
 		Driver.findElement(lnk_Sign).click();
 		Thread.sleep(2000);
+		//int count = Driver.findElements(By.tagName("iframe")).size();
+		Driver.switchTo().frame("authiframe");
+		
 		Driver.findElement(txt_MobileNum).clear();
 		Driver.findElement(txt_MobileNum).click();
 		Driver.findElement(txt_MobileNum).sendKeys(Mobile_num);
