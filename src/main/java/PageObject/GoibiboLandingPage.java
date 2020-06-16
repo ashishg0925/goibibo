@@ -29,11 +29,8 @@ public class GoibiboLandingPage extends BrowserSelection {
 	{
 		Driver.findElement(lnk_Sign).click();
 		Thread.sleep(2000);
-		//int count = Driver.findElements(By.tagName("iframe")).size();
 		Driver.switchTo().frame("authiframe");
 		
-		Driver.findElement(txt_MobileNum).clear();
-		Driver.findElement(txt_MobileNum).click();
 		Driver.findElement(txt_MobileNum).sendKeys(Mobile_num);
 		Thread.sleep(2000);
 		Driver.findElement(btn_cont).click();
